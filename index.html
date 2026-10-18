@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page settings -->
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens instead of showing a tiny desktop view -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Money Tracker: keep track of your income, expenses, and savings.">
+  <title>Money Tracker</title>
+  <!-- Connects our stylesheet (colours, spacing, layout) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top bar with the app name -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">MT</span>
+        <h1 class="brand-name">Money Tracker</h1>
+      </div>
+      <p class="header-note">Display currency: <span class="muted">not set yet</span></p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Summary cards: totals will be filled in during a later stage -->
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading" class="visually-hidden">Summary</h2>
+
+      <article class="card summary-card summary-card--income">
+        <h3 class="summary-label">Total income</h3>
+        <p class="summary-value" id="total-income">—</p>
+        <p class="summary-hint">No transactions yet</p>
+      </article>
+
+      <article class="card summary-card summary-card--expense">
+        <h3 class="summary-label">Total expenses</h3>
+        <p class="summary-value" id="total-expenses">—</p>
+        <p class="summary-hint">No transactions yet</p>
+      </article>
+
+      <article class="card summary-card summary-card--savings">
+        <h3 class="summary-label">Savings</h3>
+        <p class="summary-value" id="total-savings">—</p>
+        <p class="summary-hint">Income minus expenses</p>
+      </article>
+    </section>
+
+    <div class="layout">
+
+      <!-- Placeholder for the "Add transaction" form (built in Stage 2) -->
+      <section class="card panel" aria-labelledby="add-heading">
+        <h2 id="add-heading" class="panel-title">Add a transaction</h2>
+        <div class="placeholder">
+          <p class="placeholder-title">The form will appear here</p>
+          <p class="placeholder-text">
+            You'll be able to enter a description, amount, currency, date,
+            category, and whether it's income or an expense.
+          </p>
+        </div>
+      </section>
+
+      <!-- Placeholder for the list of transactions -->
+      <section class="card panel" aria-labelledby="list-heading">
+        <h2 id="list-heading" class="panel-title">Transactions</h2>
+        <div class="placeholder" id="transaction-list">
+          <p class="placeholder-title">No transactions yet</p>
+          <p class="placeholder-text">
+            Your income and expenses will be listed here, each in its
+            original currency.
+          </p>
+        </div>
+      </section>
+
+      <!-- Placeholder for the monthly spending chart -->
+      <section class="card panel panel--wide" aria-labelledby="chart-heading">
+        <h2 id="chart-heading" class="panel-title">Monthly spending</h2>
+        <div class="placeholder placeholder--chart">
+          <p class="placeholder-title">Chart coming later</p>
+          <p class="placeholder-text">
+            A month-by-month chart of your spending will be shown here.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Money Tracker · Stage 1 (layout preview)</p>
+    </div>
+  </footer>
+
+  <!-- Connects our JavaScript. "defer" means: load it after the page is ready -->
+  <script src="app.js" defer></script>
+</body>
+</html>
